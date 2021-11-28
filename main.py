@@ -23,11 +23,11 @@ updater = Updater(token=TOKEN) #обновляетя данные
 dispatcher = updater.dispatcher  #решаетя что делать с данными от ползователей
 
 
-# def start_action(update, context):
-#     reply_keyboard = ReplyKeyboardMarkup()
-#     context.bot.send_message(chat_id=update.effective_chat.id,
-#                              text='Готов служить',
-#                              reply_keyboard=reply_keyboard)
+def start_action(update, context):
+    reply_keyboard = ReplyKeyboardMarkup(keyboard=[['Рейтинг по домашкам', 'общий рейтинг']], one_time_keyboard=True, resize_keyboard=True)
+    context.bot.send_message(chat_id=update.effective_chat.id,
+                             text='Готов служить',
+                             reply_keyboard=reply_keyboard)
 
 
 
