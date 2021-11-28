@@ -15,7 +15,7 @@ TOKEN = os.getenv('TOKEN')
 #
 # print(data['result'][2]['message']['text'])
 
-
+from telegram import ReplyKeyboardMarkup
 from telegram.ext import CommandHandler, MessageHandler, Filters
 from telegram.ext import Updater
 
@@ -23,8 +23,11 @@ updater = Updater(token=TOKEN) #обновляетя данные
 dispatcher = updater.dispatcher  #решаетя что делать с данными от ползователей
 
 
-def start_action(update, context):
-    context.bot.send_message(chat_id=update.effective_chat.id, text='Готов служить')
+# def start_action(update, context):
+#     reply_keyboard = ReplyKeyboardMarkup()
+#     context.bot.send_message(chat_id=update.effective_chat.id,
+#                              text='Готов служить',
+#                              reply_keyboard=reply_keyboard)
 
 
 
