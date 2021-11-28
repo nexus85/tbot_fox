@@ -23,7 +23,8 @@ updater = Updater(token=TOKEN) #обновляетя данные
 dispatcher = updater.dispatcher  #решаетя что делать с данными от ползователей
 
 
-
+def start_action(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text='Готов служить')
 
 
 
