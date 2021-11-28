@@ -6,8 +6,8 @@ from getuseragent import UserAgent
 
 
 useragent = UserAgent("desktop").Random()
-TOKEN = os.environ.get('TOKEN')
-
+# TOKEN = os.environ.get('TOKEN')
+TOKEN = os.getenv('TOKEN')
 
 
 # res = requests.get(f'https://api.telegram.org/bot{TOKEN}/getUpdates', headers={"useragent":useragent})
@@ -21,6 +21,14 @@ from telegram.ext import Updater
 
 updater = Updater(token=TOKEN) #обновляетя данные
 dispatcher = updater.dispatcher  #решаетя что делать с данными от ползователей
+
+
+
+
+
+
+
+
 
 
 def start(update, context):
